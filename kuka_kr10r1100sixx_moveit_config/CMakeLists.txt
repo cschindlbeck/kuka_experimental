@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(kuka_kr6r900sixx_moveit_config)
+project(kuka_kr10r1100sixx_moveit_config)
 
 find_package(catkin REQUIRED)
 
