@@ -51,7 +51,7 @@
   <!-- the hardware_interface node expects its parameters in the 'rsi' namespace -->
   <rosparam subst_value="true">
     rsi:
-      address: $(arg robot_ip)
+      address: 169.254.205.111
       port: $(arg robot_port)
   </rosparam>
 
