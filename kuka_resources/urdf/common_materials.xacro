@@ -181,4 +181,12 @@
       <color rgba="${colour_kuka_ral_gray_white}"/>
     </material>
   </xacro:macro>
+
+  <xacro:macro name="material_kuka_anthracite_gray">
+    <material name="">
+      <color rgba="${colour_kuka_anthracite_gray}"/>
+    </material>
+  </xacro:macro>
+
+
 </robot>
