@@ -1,5 +1,5 @@
 controller_list:
-  - name: fake_kkr10_controller
+  - name: fake_manipulator_controller
     joints:
       - joint_a1
       - joint_a2
