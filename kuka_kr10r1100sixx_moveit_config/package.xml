@@ -5,8 +5,8 @@
   <description>
      An automatically generated package with all the configuration and launch files for using the kuka_kr10r1100sixx with the MoveIt! Motion Planning Framework
   </description>
-  <author email="4990antonio@gmail.com">Anthonio</author>
-  <maintainer email="4990antonio@gmail.com">Anthonio</maintainer>
+  <author email="4990antonio@gmail.com">anthonio</author>
+  <maintainer email="4990antonio@gmail.com">anthonio</maintainer>
 
   <license>BSD</license>
 
