@@ -1,4 +1,9 @@
 <launch>
+
+  <rosparam file="$(find agilus)/config/Gripper_Controll.yaml" command="load"/>
+
+  <node name="Remapping_Joint_State" pkg="agilus" type="jremap.py" />
+
   <!-- A convenience launch file that launches all of the required nodes to
        plan and execute motions using RViz, MoveIt and the ros_control based
        KUKA RSI driver from the kuka_rsi_hw_interface package.
@@ -49,5 +54,7 @@
   <include file="$(find kuka_gripper_moveit_config)/launch/default_warehouse_db.launch" if="$(arg db)">
     <arg name="moveit_warehouse_database_path" value="$(arg db_path)"/>
   </include>
+
+
 
 </launch>
