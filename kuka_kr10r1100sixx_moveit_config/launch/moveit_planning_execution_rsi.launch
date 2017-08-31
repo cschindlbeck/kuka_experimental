@@ -1,7 +1,6 @@
 <launch>
 
-
-
+  <rosparam file="$(find kuka_kr10r1100sixx_moveit_config)/config/gripper_state.yaml" command="load"/>
 
   <!-- A convenience launch file that launches all of the required nodes to
        plan and execute motions using RViz, MoveIt and the ros_control based

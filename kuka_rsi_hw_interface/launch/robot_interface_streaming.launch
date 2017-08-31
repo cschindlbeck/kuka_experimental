@@ -81,6 +81,9 @@
       action_monitor_rate: 20 # Defaults to 20
   </rosparam>
 
+  <arg name="GipperOn" default="false" />
+
+<group if="$(arg GipperOn)">
   <!-- main 'driver node': the RSI hardware interface -->
   <node name="kuka_hardware_interface" pkg="kuka_rsi_hw_interface" type="kuka_hardware_interface_node" respawn="false">
     <!-- remap topics to conform to ROS-I specifications -->
@@ -88,6 +91,18 @@
     <remap from="$(arg pos_ctrlr_name)/state" to="/feedback_states" />
     <remap from="$(arg pos_ctrlr_name)/command" to="/joint_path_command"/>
   </node>
+</group>
+
+<group unless="$(arg GipperOn)">
+  <!-- main 'driver node': the RSI hardware interface -->
+  <node name="kuka_hardware_interface" pkg="kuka_rsi_hw_interface" type="kuka_hardware_interface_node" respawn="false">
+    <!-- remap topics to conform to ROS-I specifications -->
+    <remap from="$(arg pos_ctrlr_name)/follow_joint_trajectory" to="/joint_trajectory_action" />
+    <remap from="$(arg pos_ctrlr_name)/state" to="/feedback_states" />
+    <remap from="$(arg pos_ctrlr_name)/command" to="/joint_path_command"/>
+    <remap from="/joint_states" to="/joint_states2"/>
+  </node>
+</group>
 
   <!-- spawn the actual controllers: note that the names of the controllers must
        correspond to those specified in the rosparam snippet above -->

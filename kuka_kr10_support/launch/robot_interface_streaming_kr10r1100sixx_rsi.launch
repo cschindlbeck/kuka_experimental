@@ -20,6 +20,7 @@
 -->
 <launch>
   <arg name="robot_ip" doc="IP of controller" />
+  <arg name="GipperOn" default="false" />
 
   <rosparam command="load" file="$(find kuka_kr10_support)/config/joint_names_kr10r1100sixx.yaml" />
 

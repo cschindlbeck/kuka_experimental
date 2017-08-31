@@ -1,8 +1,9 @@
 <launch>
 
-  <rosparam file="$(find agilus)/config/Gripper_Controll.yaml" command="load"/>
-
+  <rosparam file="$(find kuka_gripper_moveit_config)/config/gripper_state.yaml" command="load"/>
   <node name="Remapping_Joint_State" pkg="agilus" type="jremap.py" />
+  <arg name="gipperOn" value="true" />
+
 
   <!-- A convenience launch file that launches all of the required nodes to
        plan and execute motions using RViz, MoveIt and the ros_control based
@@ -24,18 +25,20 @@
 
   <!-- load the robot_description parameter before launching ROS-I nodes -->
   <include file="$(find kuka_gripper_moveit_config)/launch/planning_context.launch" >
-    <arg name="load_robot_description" value="true" />
+    <arg name="load_robot_description" value="$(arg gipperOn)" />
   </include>
 
   <!-- run the robot simulator and action interface nodes -->
   <group if="$(arg sim)">
     <include file="$(find industrial_robot_simulator)/launch/robot_interface_simulator.launch" />
+    <arg name="GipperOn" value="$(arg gipperOn)" />
   </group>
 
   <!-- run the "real robot" interface nodes -->
   <group unless="$(arg sim)">
     <include file="$(find kuka_kr10_support)/launch/robot_interface_streaming_kr10r1100sixx_rsi.launch" >
       <arg name="robot_ip" value="$(arg robot_ip)"/>
+      <arg name="GipperOn" value="true" />
     </include>
   </group>
 
