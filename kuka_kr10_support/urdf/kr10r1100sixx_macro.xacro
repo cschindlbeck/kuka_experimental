@@ -10,7 +10,7 @@
         <geometry>
           <mesh filename="package://kuka_kr10_support/meshes/kr10r1100sixx/visual/base.stl" />
         </geometry>
- 	<xacro:material_kuka_black />
+ 	      <xacro:material_kuka_black />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>

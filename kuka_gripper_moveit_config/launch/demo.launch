@@ -1,6 +1,6 @@
 <launch>
 
-  <rosparam file="$(find agilus)/config/Gripper_Controll.yaml" command="load"/>
+  <rosparam file="$(find kuka_gripper_moveit_config)/config/controllers.yaml" command="load"/>
 
   <!-- By default, we do not start a database (it can be large) -->
   <arg name="db" default="false" />

@@ -93,27 +93,6 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-          kinect2_depth_frame:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          kinect2_depth_optical_frame:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          kinect2_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          kinect2_rgb_frame:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          kinect2_rgb_optical_frame:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
           l_finger_link:
             Alpha: 1
             Show Axes: false
@@ -168,7 +147,7 @@ Visualization Manager:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-        Loop Animation: true
+        Loop Animation: false
         Robot Alpha: 0.5
         Robot Color: 150; 50; 150
         Show Robot Collision: false
@@ -191,7 +170,7 @@ Visualization Manager:
         Interactive Marker Size: 0
         Joint Violation Color: 255; 0; 255
         Planning Group: manipulator
-        Query Goal State: true
+        Query Goal State: false
         Query Start State: false
         Show Workspace: false
         Start State Alpha: 1
@@ -317,7 +296,7 @@ Visualization Manager:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-        Robot Alpha: 0.5
+        Robot Alpha: 1
         Show Robot Collision: false
         Show Robot Visual: true
       Value: true
