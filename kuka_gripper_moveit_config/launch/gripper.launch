@@ -7,6 +7,9 @@
 
   <rosparam file="$(find kuka_gripper_moveit_config)/config/controllers.yaml" command="load" />
 
+
+
+
   <!-- Gripper -->
   <arg name="gripper" default="true" doc="Set to true if gripper is attached" />
 
@@ -64,5 +67,11 @@
   <include file="$(find kuka_gripper_moveit_config)/launch/default_warehouse_db.launch" if="$(arg db)">
     <arg name="moveit_warehouse_database_path" value="$(arg db_path)"/>
   </include>
+
+
+  <!-- Testing gripper action client >
+  <group if="$(arg gripper)">
+    <node name="simple_gripper" pkg="agilus" type="simple_gripper" />
+  </group-->
 
 </launch>
