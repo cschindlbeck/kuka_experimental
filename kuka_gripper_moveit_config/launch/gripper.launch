@@ -7,9 +7,6 @@
 
   <rosparam file="$(find kuka_gripper_moveit_config)/config/controllers.yaml" command="load" />
 
-
-
-
   <!-- Gripper -->
   <arg name="gripper" default="true" doc="Set to true if gripper is attached" />
 
