@@ -5,9 +5,9 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /MotionPlanning1
-        - /MotionPlanning1/Planning Request1
-      Splitter Ratio: 0.74256
-    Tree Height: 330
+        - /MotionPlanning1/Planned Path1
+      Splitter Ratio: 0.742560029
+    Tree Height: 300
   - Class: rviz/Help
     Name: Help
   - Class: rviz/Views
@@ -24,7 +24,7 @@ Visualization Manager:
       Color: 160; 160; 164
       Enabled: true
       Line Style:
-        Line Width: 0.03
+        Line Width: 0.0299999993
         Value: Lines
       Name: Grid
       Normal Cell Count: 0
@@ -63,17 +63,7 @@ Visualization Manager:
           Expand Joint Details: false
           Expand Link Details: false
           Expand Tree: false
-          Grundplatt_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
           Link Tree Style: Links in Alphabetic Order
-          Table_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
           base:
             Alpha: 1
             Show Axes: false
@@ -83,12 +73,17 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-          gripper_link:
+          base_plate_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          interfero_link:
+          beamexp_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          gripper_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -143,6 +138,11 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          table_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
           tool0:
             Alpha: 1
             Show Axes: false
@@ -150,9 +150,9 @@ Visualization Manager:
         Loop Animation: true
         Robot Alpha: 0.5
         Robot Color: 150; 50; 150
-        Show Robot Collision: false
+        Show Robot Collision: true
         Show Robot Visual: true
-        Show Trail: false
+        Show Trail: true
         State Display Time: 0.05 s
         Trail Step Size: 1
         Trajectory Topic: move_group/display_planned_path
@@ -162,7 +162,7 @@ Visualization Manager:
         Show Manipulability: false
         Show Manipulability Index: false
         Show Weight Limit: false
-        TextHeight: 0.08
+        TextHeight: 0.0799999982
       Planning Request:
         Colliding Link Color: 255; 0; 0
         Goal State Alpha: 1
@@ -180,7 +180,7 @@ Visualization Manager:
       Scene Geometry:
         Scene Alpha: 1
         Scene Color: 119; 172; 48
-        Scene Display Time: 0.2
+        Scene Display Time: 0.200000003
         Show Scene Geometry: true
         Voxel Coloring: Z-Axis
         Voxel Rendering: Occupied Voxels
@@ -191,17 +191,7 @@ Visualization Manager:
           Expand Joint Details: false
           Expand Link Details: false
           Expand Tree: false
-          Grundplatt_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
           Link Tree Style: Links in Alphabetic Order
-          Table_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
           base:
             Alpha: 1
             Show Axes: false
@@ -211,37 +201,21 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          base_plate_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          beamexp_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
           gripper_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          interfero_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          kinect2_depth_frame:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          kinect2_depth_optical_frame:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          kinect2_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          kinect2_rgb_frame:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          kinect2_rgb_optical_frame:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
           l_finger_link:
             Alpha: 1
             Show Axes: false
@@ -292,6 +266,11 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          table_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
           tool0:
             Alpha: 1
             Show Axes: false
@@ -303,6 +282,7 @@ Visualization Manager:
   Enabled: true
   Global Options:
     Background Color: 255; 255; 255
+    Default Light: true
     Fixed Frame: base_link
     Frame Rate: 30
   Name: root
@@ -315,27 +295,30 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 3.14979
+      Distance: 2.26242375
       Enable Stereo Rendering:
-        Stereo Eye Separation: 0.06
+        Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.485744
-        Y: -0.221802
-        Z: 4.47041e-08
+        X: 0.804204941
+        Y: 0.0133211613
+        Z: -7.45051807e-08
+      Focal Shape Fixed Size: true
+      Focal Shape Size: 0.0500000007
+      Invert Z Axis: false
       Name: Current View
-      Near Clip Distance: 0.01
-      Pitch: 0.0647969
+      Near Clip Distance: 0.00999999978
+      Pitch: 0.564796686
       Target Frame: base_link
       Value: XYOrbit (rviz)
-      Yaw: 0.0317635
+      Yaw: 0.341764867
     Saved: ~
 Window Geometry:
   Displays:
     collapsed: false
-  Height: 1026
+  Height: 987
   Help:
     collapsed: false
   Hide Left Dock: false
@@ -344,9 +327,9 @@ Window Geometry:
     collapsed: false
   MotionPlanning - Slider:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd0000000100000000000002a2000003bcfc0200000007fb000000100044006900730070006c0061007900730100000028000001df000000dd00fffffffb0000000800480065006c00700000000342000000bb0000007600fffffffb0000000a0056006900650077007300000003b0000000b0000000b000fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb0000002e004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d00200053006c00690064006500720000000000ffffffff0000004a00fffffffb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e0067010000020d000001d7000001cc00ffffff000003a7000003bc00000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000100000000000002b800000395fc0200000007fb000000100044006900730070006c0061007900730100000028000001c1000000d700fffffffb0000000800480065006c00700000000342000000bb0000007300fffffffb0000000a0056006900650077007300000003b0000000b0000000ad00fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb0000002e004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d00200053006c00690064006500720000000000ffffffff0000004a00fffffffb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e006701000001ef000001ce000001cc00ffffff000001aa0000039500000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Views:
     collapsed: false
-  Width: 1615
-  X: 65
+  Width: 1128
+  X: 2425
   Y: 24
