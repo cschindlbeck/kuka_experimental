@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<robot xmlns:xacro="http://ros.org/wiki/xacro">
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
   <!-- colours based on RAL values given in "FAQ - Colours of robot and robot
        controller", version "KUKA.Tifs | 2010-01-21 |YM| DefaultColorsRobotAndController.doc",
        downloaded 2015-07-18 from
@@ -105,4 +105,7 @@
 
   <!-- RAL 9002 - gray white  -->
   <xacro:property name="colour_kuka_ral_gray_white"       value="${215/255} ${213/255} ${203/255} 1.0" />
+
+  <!-- RAL 9010 - pure white  -->
+  <xacro:property name="colour_kuka_ral_pure_white"       value="${241/255} ${236/255} ${255/255} 1.0" />
 </robot>

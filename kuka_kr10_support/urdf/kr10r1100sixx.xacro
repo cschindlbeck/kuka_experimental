@@ -1,6 +1,12 @@
 <?xml version="1.0"?>
+<<<<<<< HEAD
 <robot name="kuka_kr10r1100sixx" xmlns:xacro="http://ros.org/wiki/xacro">
   <xacro:include filename="$(find kuka_kr10_support)/urdf/kr10r1100sixx_macro.xacro" />
   <xacro:kuka_kr10r1100sixx prefix=""/>
 
+=======
+<robot name="kuka_kr10r1100sixx" xmlns:xacro="http://wiki.ros.org/xacro">
+  <xacro:include filename="$(find kuka_kr10_support)/urdf/kr10r1100sixx_macro.xacro" />
+  <xacro:kuka_kr10r1100sixx prefix=""/>
+>>>>>>> f99a6f654283e7860658382b7c28474940a2cc06
 </robot>
