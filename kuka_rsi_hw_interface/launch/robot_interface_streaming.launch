@@ -107,6 +107,6 @@
   <!-- spawn the actual controllers: note that the names of the controllers must
        correspond to those specified in the rosparam snippet above -->
   <node name="controller_spawner" pkg="controller_manager" type="spawner"
-    args="$(arg pos_ctrlr_name) $(arg js_ctrlr) --shutdown-timeout 1"
+    args="$(arg pos_ctrlr_name) $(arg js_ctrlr)"
     respawn="false" output="screen" />
 </launch>
