@@ -153,7 +153,7 @@ Visualization Manager:
         Show Robot Collision: true
         Show Robot Visual: true
         Show Trail: true
-        State Display Time: 0.05 s
+        State Display Time: REALTIME
         Trail Step Size: 1
         Trajectory Topic: move_group/display_planned_path
       Planning Metrics:
