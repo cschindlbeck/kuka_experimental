@@ -6,9 +6,7 @@
 
   <group if="$(arg remap)">
     <!-- remap topics to conform to ROS-I specifications -->
-
-    <!--remap from="/arm_controller/follow_joint_trajectory" to="/joint_trajectory_action"/-->
-    <remap from="/arm_controller/follow_joint_trajectory" to="/execute_trajectory"/>
+    <remap from="/arm_controller/follow_joint_trajectory" to="/joint_trajectory_action"/>
     <remap from="/arm_controller/state" to="/feedback_states"/>
     <remap from="/arm_controller/command" to="/joint_path_command"/>
 
