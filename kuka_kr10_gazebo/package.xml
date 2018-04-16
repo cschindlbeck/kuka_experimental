@@ -3,7 +3,7 @@
   <version>0.0.1</version>
   <description>
     <p>
-      ROS-Industrial Gazebo support package for the Staubli TX90 (and variants).
+      ROS-Industrial Gazebo support package for the Kuka kr10 (and variants).
     </p>
     <p>
       This package contains the configuration data and launch files required
