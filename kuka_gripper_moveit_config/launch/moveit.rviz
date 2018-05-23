@@ -152,7 +152,7 @@ Visualization Manager:
         Robot Color: 150; 50; 150
         Show Robot Collision: true
         Show Robot Visual: true
-        Show Trail: true
+        Show Trail: false
         State Display Time: REALTIME
         Trail Step Size: 1
         Trajectory Topic: move_group/display_planned_path

@@ -75,7 +75,6 @@
     <turnGravityOff>true</turnGravityOff>
   </gazebo>
   <gazebo reference="${prefix}link_1">
-<<<<<<< HEAD
     <material>Gazebo/DarkGrey</material>
     <turnGravityOff>true</turnGravityOff>
   </gazebo>
@@ -93,25 +92,6 @@
   </gazebo>
   <gazebo reference="${prefix}link_5">
     <material>Gazebo/DarkGrey</material>
-=======
-    <material>Gazebo/Orange</material>
-    <turnGravityOff>true</turnGravityOff>
-  </gazebo>
-  <gazebo reference="${prefix}link_2">
-    <material>Gazebo/Orange</material>
-    <turnGravityOff>true</turnGravityOff>
-  </gazebo>
-  <gazebo reference="${prefix}link_3">
-    <material>Gazebo/Orange</material>
-    <turnGravityOff>true</turnGravityOff>
-  </gazebo>
-  <gazebo reference="${prefix}link_4">
-    <material>Gazebo/Orange</material>
-    <turnGravityOff>true</turnGravityOff>
-  </gazebo>
-  <gazebo reference="${prefix}link_5">
-    <material>Gazebo/Orange</material>
->>>>>>> b1bbeb3c961b0bfd8cc234cdedf3a63034f573c1
     <turnGravityOff>true</turnGravityOff>
   </gazebo>
   <gazebo reference="${prefix}link_6">
