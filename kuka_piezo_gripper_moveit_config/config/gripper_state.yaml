@@ -1,0 +1,3 @@
+gripper/joint_names: ["l_finger_joint","r_finger_joint"]
+gripper/state: [0.04,0.04]
+gripper/build: true
