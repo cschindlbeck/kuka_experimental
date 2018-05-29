@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: agilus
+    relative_path: urdf/kuka_piezo_gripper.urdf.xacro
+    xacro_args: "--inorder "
+  SRDF:
+    relative_path: config/kuka_piezo_gripper.srdf
+  CONFIG:
+    author_name: Christopher Schindlbeck
+    author_email: schindlbeck@imr.uni-hannover.de
+    generated_timestamp: 1527578792
