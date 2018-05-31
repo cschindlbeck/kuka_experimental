@@ -42,7 +42,7 @@
 
   <!-- run the "real robot" interface nodes -->
   <group unless="$(arg sim)">
-    <!-- remap from="joint_states" to="joint_states_kuka"/ -->
+    <remap from="/joint_states" to="/joint_states_kuka"/>
     <include file="$(find kuka_kr10_support)/launch/robot_interface_streaming_kr10r1100sixx_rsi.launch" >
       <arg name="robot_ip" value="$(arg robot_ip)"/>
     </include>
