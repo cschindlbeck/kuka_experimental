@@ -3,8 +3,8 @@ controller_list:
     action_ns: joint_trajectory_action
     type: FollowJointTrajectory
     joints: [joint_a1, joint_a2, joint_a3, joint_a4, joint_a5, joint_a6]
-
-  - name: gripper_arm_controller
+  - name: gripper_controller
     action_ns: gripper_action
     type: GripperCommand
-    joints: [l_finger_joint, r_finger_joint]
+    joints:
+      - l_finger_joint
