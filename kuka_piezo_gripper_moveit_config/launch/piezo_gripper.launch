@@ -4,7 +4,6 @@
        plan and execute motions using RViz, MoveIt and the ros_control based
        KUKA RSI driver from the kuka_rsi_hw_interface package.
   -->
-  <node pkg="agilus" name="gripper_action_server" type="gripper_action_server.py"/>
 
   <!-- Gripper -->
   <arg name="gripper" default="true" doc="Set to true if gripper is attached" />
@@ -17,6 +16,7 @@
 
   <!-- Remapping of joint states if gripper is attached -->
   <group if="$(arg gripper)">
+    <node pkg="agilus" name="gripper_action_server" type="gripper_action_server.py"/>
     <node name="joint_state_remapper" pkg="agilus" type="jremap.py" />
     <rosparam file="$(find kuka_piezo_gripper_moveit_config)/config/gripper_state.yaml" command="load" />
   </group>
@@ -37,8 +37,7 @@
   <!-- run the robot simulator and action interface nodes -->
   <group if="$(arg sim)">
     <remap from="joint_states" to="joint_states_kuka"/>
-    <include file="$(find industrial_robot_simulator)/launch/robot_interface_simulator.launch" >
-    </include>
+    <include file="$(find industrial_robot_simulator)/launch/robot_interface_simulator.launch" />
   </group>
 
   <!-- run the "real robot" interface nodes -->

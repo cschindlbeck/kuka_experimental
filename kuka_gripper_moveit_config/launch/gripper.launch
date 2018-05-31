@@ -5,8 +5,6 @@
        KUKA RSI driver from the kuka_rsi_hw_interface package.
   -->
 
-  <rosparam file="$(find kuka_gripper_moveit_config)/config/controllers.yaml" command="load" />
-
   <!-- Gripper -->
   <arg name="gripper" default="true" doc="Set to true if gripper is attached" />
 
@@ -18,7 +16,8 @@
 
   <!-- Remapping of joint states if gripper is attached -->
   <group if="$(arg gripper)">
-    <node name="joint_state_remapper" pkg="agilus" type="jremap.py" />
+    <node pkg="agilus" name="gripper_action_server" type="gripper_action_server.py"/>
+    <node pkg="agilus" name="joint_state_remapper" type="jremap.py" />
     <rosparam file="$(find kuka_gripper_moveit_config)/config/gripper_state.yaml" command="load" />
   </group>
 
@@ -37,13 +36,13 @@
 
   <!-- run the robot simulator and action interface nodes -->
   <group if="$(arg sim)">
-    <include file="$(find industrial_robot_simulator)/launch/robot_interface_simulator.launch" >
-      <arg name="gripper" value="$(arg gripper)"/>
-    </include>
+    <remap from="joint_states" to="joint_states_kuka"/>
+    <include file="$(find industrial_robot_simulator)/launch/robot_interface_simulator.launch" />
   </group>
 
   <!-- run the "real robot" interface nodes -->
   <group unless="$(arg sim)">
+    <!-- remap from="joint_states" to="joint_states_kuka"/ -->
     <include file="$(find kuka_kr10_support)/launch/robot_interface_streaming_kr10r1100sixx_rsi.launch" >
       <arg name="robot_ip" value="$(arg robot_ip)"/>
     </include>
@@ -58,17 +57,11 @@
 
   <include file="$(find kuka_gripper_moveit_config)/launch/moveit_rviz.launch">
     <arg name="config" value="true"/>
-  </include>0
+  </include>
 
   <!-- If database loading was enabled, start mongodb as well -->
   <include file="$(find kuka_gripper_moveit_config)/launch/default_warehouse_db.launch" if="$(arg db)">
     <arg name="moveit_warehouse_database_path" value="$(arg db_path)"/>
   </include>
-
-
-  <!-- Testing gripper action client >
-  <group if="$(arg gripper)">
-    <node name="simple_gripper" pkg="agilus" type="simple_gripper" />
-  </group-->
 
 </launch>
