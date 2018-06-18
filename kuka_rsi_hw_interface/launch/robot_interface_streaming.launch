@@ -51,7 +51,7 @@
   <!-- the hardware_interface node expects its parameters in the 'rsi' namespace -->
   <rosparam subst_value="true">
     rsi:
-      listen_address: 169.254.205.111
+      listen_address: 192.168.1.19
       listen_port: $(arg robot_port)
   </rosparam>
 
@@ -80,7 +80,7 @@
       state_publish_rate: 50 # Defaults to 50
       action_monitor_rate: 20 # Defaults to 20
   </rosparam>
-  
+
   <!-- main 'driver node': the RSI hardware interface -->
   <node name="kuka_hardware_interface" pkg="kuka_rsi_hw_interface" type="kuka_hardware_interface_node" respawn="false">
     <!-- remap topics to conform to ROS-I specifications -->
