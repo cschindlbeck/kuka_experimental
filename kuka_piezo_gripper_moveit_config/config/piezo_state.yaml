@@ -1,0 +1,3 @@
+piezo/joint_names: ["piezo_x","piezo_y","piezo_z"]
+piezo/state: [0.0, 0.0, 0.0]
+piezo/build: true
