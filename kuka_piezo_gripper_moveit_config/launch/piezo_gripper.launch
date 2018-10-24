@@ -5,6 +5,10 @@
        KUKA RSI driver from the kuka_rsi_hw_interface package.
   -->
 
+  <!-- Piezo state publisher -->
+  <node name="desired_piezo_state_publisher" pkg="agilus" type="desired_piezo_state_pub.py" />
+  <rosparam file="$(find kuka_piezo_gripper_moveit_config)/config/piezo_state.yaml" command="load" />
+
   <!-- Gripper -->
   <arg name="gripper" default="true" doc="Set to true if gripper is attached" />
 
@@ -14,7 +18,7 @@
   <!--  - if sim=false, a robot_ip argument is required -->
   <arg name="robot_ip" unless="$(arg sim)" doc="IP of controller (only required if not using industrial simulator)" />
 
-  <!-- Remapping of joint states if gripper is attached -->
+  <!-- Launch gripper action server, remap joint states, load gripper state if gripper is attached -->
   <group if="$(arg gripper)">
     <node pkg="agilus" name="gripper_action_server" type="gripper_action_server.py"/>
     <node name="joint_state_remapper" pkg="agilus" type="jremap.py" />
