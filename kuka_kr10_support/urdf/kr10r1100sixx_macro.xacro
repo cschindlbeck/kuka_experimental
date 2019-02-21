@@ -188,7 +188,8 @@
       <parent link="${prefix}link_3"/>
       <child link="${prefix}link_4"/>
       <axis xyz="-1 0 0"/>
-      <limit effort="0" lower="${-DEG2RAD * 185}" upper="${DEG2RAD * 185}" velocity="${DEG2RAD * 381}"/>
+      <!-- limit effort="0" lower="${-DEG2RAD * 185}" upper="${DEG2RAD * 185}" velocity="${DEG2RAD * 381}"/ -->
+      <limit effort="0" lower="${-DEG2RAD * 90}" upper="${DEG2RAD * 90}" velocity="${DEG2RAD * 381}"/>
     </joint>
     <joint name="${prefix}joint_a5" type="revolute">
       <origin xyz="${kuka_kr10r1100sixx_d4} 0 0" rpy="0 0 0"/>
@@ -202,7 +203,8 @@
       <parent link="${prefix}link_5"/>
       <child link="${prefix}link_6"/>
       <axis xyz="-1 0 0"/>
-      <limit effort="0" lower="${-DEG2RAD * 350}" upper="${DEG2RAD * 350}" velocity="${DEG2RAD * 615}"/>
+      <!-- limit effort="0" lower="${-DEG2RAD * 350}" upper="${DEG2RAD * 350}" velocity="${DEG2RAD * 615}"/ -->
+      <limit effort="0" lower="${-DEG2RAD * 180}" upper="${DEG2RAD * 180}" velocity="${DEG2RAD * 615}"/>
     </joint>
     <joint name="${prefix}joint_a6-tool0" type="fixed">
       <parent link="${prefix}link_6"/>
